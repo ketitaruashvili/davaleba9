@@ -1,0 +1,95 @@
+.space {
+  height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    #06068f,
+    rgb(7, 43, 148),
+    rgb(5, 33, 118),
+    rgb(2, 15, 53)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.sun {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  position: relative;
+  background: linear-gradient(
+    #fc9d11,
+    #f9c36b,
+    #f9d395,
+    #f9ce89,
+    #f9d395,
+    #f9c36b,
+    #fc9d11
+  );
+}
+
+.mercury-orbit {
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation-name: Mercury;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 4s;
+}
+.mercury {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(#e7e8ec, #ada8a5, #8c8c94, #68696d);
+  position: absolute;
+  left: 50%;
+  top: -25px;
+  transform: translateX(-50%);
+}
+
+@keyframes Mercury {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.earth-orbit {
+  width: 900px;
+  height: 900px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation-name: earth;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 8s;
+}
+.earth {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(#4f4cb0, #6b93d6, #e9eff9, #9fc164, #d8c596);
+  position: absolute;
+  left: 50%;
+  top: -25px;
+  transform: translateX(-50%);
+}
+
+@keyframes earth {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
